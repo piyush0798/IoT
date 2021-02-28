@@ -56,10 +56,7 @@ class _IotScreenState extends State<IotScreen> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                    snapshot.data.snapshot.value["Temperature:"]
-                                            .toString() +
-                                        "°C",
+                                child: Text('Temp data',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 20)),
                               ),
@@ -94,10 +91,10 @@ class _IotScreenState extends State<IotScreen> {
     );
 
 
-    Future<void> readData() async {
-    dbRef.child("Data").once().then((DataSnapshot snapshot) {
-      print(snapshot.value);
-    });
-  }
+  //   Future<void> readData() async {
+  //   dbRef.child("Data").once().then((DataSnapshot snapshot) {
+  //     print(snapshot.value);
+  //   });
+  // }
     }
 }
