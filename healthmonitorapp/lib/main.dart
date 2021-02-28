@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:healthmonitorapp/IotScreen1.dart';
 import 'package:healthmonitorapp/myscreen.dart';
-import 'IotScreen.dart';
-import 'package:healthmonitorapp/IotScreen.dart';
+//import 'package:healthmonitorapp/myscreen.dart';
+//import 'IotScreen.dart';
+//import 'package:healthmonitorapp/IotScreen.dart';
 
 void main() => runApp(MyApp());
 
