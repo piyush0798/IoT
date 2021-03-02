@@ -10,7 +10,7 @@ class MyScreen extends StatefulWidget {
 
 class _MyScreenState extends State<MyScreen> {
   final databaseReference =
-      FirebaseDatabase.instance.reference();
+      FirebaseDatabase.instance.reference;
   @override
   Widget build(BuildContext context) {
     return Container(

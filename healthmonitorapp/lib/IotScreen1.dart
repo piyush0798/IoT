@@ -11,9 +11,9 @@ class IotScreen1 extends StatefulWidget {
 class _IotScreen1State extends State<IotScreen1>
     with SingleTickerProviderStateMixin {
   @override
-  final dbRef = FirebaseDatabase.instance.reference();
+  final dbRef = FirebaseDatabase.instance.reference;
   bool value = false;
-  Color color = Colors.grey;
+  //Color color = Colors.grey;
 
   onUpdate() {
     setState(() {
@@ -172,15 +172,15 @@ class _IotScreen1State extends State<IotScreen1>
     );
   }
 
-  Future<void> writeData() async {
+  void writeData() async {
     dbRef.child("LightState").set({"switch": !value});
-   
+    //dbRef.child("Data"").set({"Tempreature":!value});
   }
 
  
   
 
-  Future<void> readData() async {
+  void readData() async {
     dbRef.child("Data").once().then((DataSnapshot snapshot) {
       print(snapshot.value);
     });

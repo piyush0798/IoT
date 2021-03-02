@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:healthmonitorapp/IotScreen.dart';
 import 'package:healthmonitorapp/IotScreen1.dart';
 import 'package:healthmonitorapp/myscreen.dart';
-//import 'package:healthmonitorapp/myscreen.dart';
-//import 'IotScreen.dart';
-//import 'package:healthmonitorapp/IotScreen.dart';
+//import 'package:iotfirebase/screens/iotscreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,10 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: <String, WidgetBuilder>{},
       title: 'Flutter Demo',
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(brightness: Brightness.light),
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
-      home: MyScreen(),
+      themeMode: ThemeMode.light,
+      home: IotScreen(),
     );
   }
 }
