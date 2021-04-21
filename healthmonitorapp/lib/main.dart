@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthmonitorapp/IotScreen.dart';
-import 'package:healthmonitorapp/IotScreen1.dart';
-import 'package:healthmonitorapp/myscreen.dart';
-//import 'package:iotfirebase/screens/iotscreen.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +10,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: <String, WidgetBuilder>{},
       title: 'Flutter Demo',
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData(brightness: Brightness.dark),
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      home: IotScreen(),
+      themeMode: ThemeMode.dark,
+      home: Splash(),
     );
   }
 }
+
+class Splash extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds:3,
+      backgroundColor: Colors.white,
+      image: Image.asset("assets/splashscreen.png"),
+      loaderColor: Colors.grey,
+      
+      photoSize: 250,
+      
+    
+      navigateAfterSeconds:IotScreen(),
+            
+          );
+        }
+      }
+      
+      

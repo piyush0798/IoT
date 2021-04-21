@@ -28,7 +28,7 @@ class _IotScreenState extends State<IotScreen> {
           return Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(18),
+                padding: EdgeInsets.all(50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -38,63 +38,63 @@ class _IotScreenState extends State<IotScreen> {
                       ),
                       Text("My Reading",
                       style: 
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.yellow),
                       ),
                       Icon(Icons.settings)
                   ],
                 ), 
                 ),
-                //SizedBox(height: 20),
-                SizedBox(height: 20),
+                
+                SizedBox(height: 30),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Column(
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Text("Temperature",
                                         style: TextStyle(
                                             color: !value
-                                                ? Colors.black
+                                                ? Colors.white
                                                 : Colors.yellow,
-                                            fontSize: 20,
+                                            fontSize: 25,
                                             fontWeight: FontWeight.bold)),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Text(
                                       snapshot.data.snapshot.value["Tempreature"]
                                       .toString(),
                                         style: TextStyle(
-                                            color: Colors.black, fontSize: 20)),
+                                            color: Colors.yellow, fontSize: 25)),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                SizedBox(height: 20),
+                SizedBox(height: 50),
                 Column(
                         children: [
-                           ElevatedButton(
-                    onPressed: () {
-                      writeData();
-                    },
-                    child: Text('Save Data'),
-                  ),
+                  //          ElevatedButton(
+                  //   onPressed: () {
+                  //     writeData();
+                  //   },
+                  //   child: Text('Save Data'),
+                  // ),
                                
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Text("BPM",
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Text(
                               snapshot.data.snapshot.value["BPM"]
                                       .toString(),
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.yellow),
                             ),
                           )
                         ],
